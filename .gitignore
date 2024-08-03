@@ -1,0 +1,9 @@
+node_modules/
+# Build directories
+dist/
+# Composer dependencies
+vendor/
+
+# Other
+*.zip
+*.tar.gz

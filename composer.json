@@ -1,0 +1,21 @@
+{
+    "name": "user/exovia-youtube-dsgvo",
+    "autoload": {
+        "psr-4": {
+            "User\\ExoviaYoutubeDsgvo\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "fritz siever"
+        }
+    ],
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "require-dev": {
+        "wp-coding-standards/wpcs": "^3.0"
+    }
+}

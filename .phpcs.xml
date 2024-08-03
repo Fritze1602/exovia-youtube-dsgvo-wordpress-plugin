@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="Exovia YouTube DSGVO Plugin">
+    <description>PHP_CodeSniffer ruleset for the Exovia YouTube DSGVO Plugin.</description>
+
+    <!-- Pfade und Dateien ausschließen -->
+    <exclude-pattern>vendor/*</exclude-pattern>
+    <exclude-pattern>dist/*</exclude-pattern>
+
+    <!-- Standards festlegen -->
+    <rule ref="WordPress" />
+
+    <!-- Optional: Bestimmte Regeln anpassen oder ausschließen -->
+    <!--
+    <rule ref="WordPress.NamingConventions.ValidVariableName.VariableNotSnakeCase">
+        <severity>0</severity>
+    </rule>
+    -->
+
+</ruleset>
