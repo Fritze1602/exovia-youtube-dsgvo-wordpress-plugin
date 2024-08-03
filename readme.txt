@@ -84,11 +84,15 @@ You are free to use it on any website across countries to protect the privacy of
 
 Note: Of course, activating this plugin cannot guarantee that your website is completely compliant with the GDPR. When using Google Analytics or Facebook pixels, for example, other or additional measures must be taken.
 
-**DEVELOPMENT AND BUILD TOOLS**
-For the development of browser compatible and performant frontend scripts we use a specific toolset.
-All necessary information about the build tools can be found in the base folder of the theme (package.json and webpack.config).
-The source code for the frontend JavaScript and a SASS file with the frontend styles can be found in the /src folder of the plugin.
-After installing the necessary modules, developers have their own development mode with "npm run dev". If the plugin meets the interest of developers who want to help, we will gladly and immediately publish our code on github or bitbucket. Until then you can find everything you need in the WordPress plugin repository.
+== Development and Build Tools ==
+
+If you want to view the complete source code, including the src files, build tools, and test tools, you can do so on GitHub at [https://github.com/Fritze1602/exovia-youtube-dsgvo-wordpress-plugin](https://github.com/Fritze1602/exovia-youtube-dsgvo-wordpress-plugin).
+
+After cloning the repository, the necessary modules can be installed by running `npm install` in the base directory. Developers can then use `npm run dev` for development mode and `npm run build` for production builds. The correct proxy can be set in the `webpack.config.js`.
+
+This provides complete transparency of the functionality and source code. Developers have the opportunity to customize the plugin.
+
+We welcome feedback and contributions from the developer community.
 
 == Installation ==
 This section describes how to install and run the plugin.
