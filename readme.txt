@@ -21,7 +21,7 @@ Both the placeholder and the YouTube video are mobile-optimized and automaticall
 
 With our plugin, you protect the privacy of your visitors while taking advantage of videos for your website success.
 
-Want a live demo? Then feel free to visit the following article. There we have integrated a YouTube video of ours with our DSGVO plugin in a data protection compliant manner and go into more detail on the topic of data protection and YouTube: [www.exovia.de/journal/youtube-dsgvo-konform-einbinden](YouTube DSGVO konform einbinden).
+Want a live demo? Then feel free to visit the following article. There we have integrated a YouTube video of ours with our DSGVO plugin in a data protection compliant manner and go into more detail on the topic of data protection and YouTube: [YouTube DSGVO konform einbinden](https://www.exovia.de/journal/wordpress-youtube-dsgvo-konform/).
 
 **YOUR 6 EASY TODOS FOR 1 VIDEO**
 
@@ -86,11 +86,11 @@ Note: Of course, activating this plugin cannot guarantee that your website is co
 
 == Development and Build Tools ==
 
-If you want to view the complete source code, including the src files, build tools, and test tools, you can do so on GitHub at [https://github.com/Fritze1602/exovia-youtube-dsgvo-wordpress-plugin](https://github.com/Fritze1602/exovia-youtube-dsgvo-wordpress-plugin).
+If you want to view the complete source code, including the `src` files, build tools, and test tools, you can do so on [GitHub](https://github.com/Fritze1602/exovia-youtube-dsgvo-wordpress-plugin).
 
-After cloning the repository, the necessary modules can be installed by running `npm install` in the base directory. Developers can then use `npm run dev` for development mode and `npm run build` for production builds. The correct proxy can be set in the `webpack.config.js`.
+After cloning the repository, you can install the necessary modules by running `npm install` in the base directory. Developers can then use `npm run dev` for development mode and `npm run build` for production builds. The correct proxy can be set in the `webpack.config.js`.
 
-This provides complete transparency of the functionality and source code. Developers have the opportunity to customize the plugin.
+This provides complete transparency of the functionality and source code, giving developers the opportunity to customize and enhance the plugin.
 
 We welcome feedback and contributions from the developer community.
 
