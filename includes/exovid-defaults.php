@@ -29,6 +29,7 @@ function exovid_get_options() {
 		'exovid_enable_info_box'         => 'false',
 		'exovid_info_box_text'           => __( 'Your data protection is close to our hearts. Before we connect you to external servers, we get your permission.', 'exovia-youtube-dsgvo' ),
 		'exovid_embed_link_id'           => 1,
+		'exovid_background_image_id'     => -1,
 	);
 
 	// Parse the settings with defaults.
@@ -49,6 +50,7 @@ function exovid_get_options() {
 		'show_load_all_button' => $exovid_options['exovid_show_load_all_button'],
 		'info_box_text'        => $exovid_options['exovid_info_box_text'],
 		'embed_link_id'        => $exovid_options['exovid_embed_link_id'],
+		'layer_bg_image_id'    => $exovid_options['exovid_background_image_id'],
 	);
 	return $transformed_shortcode_names;
 }

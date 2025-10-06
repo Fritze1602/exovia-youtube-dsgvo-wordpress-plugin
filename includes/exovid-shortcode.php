@@ -53,15 +53,30 @@ function exovid_youtube_video_gdpr_code( $atts ) {
 	$enable_info_box      = $a['enable_info_box'];
 	$info_box_text        = $a['info_box_text'];
 	$embed_link_id        = $default['embed_link_id'];
+	$background_image_id  = $a['layer_bg_image_id'];
 
 	$embed_link_texts = array( 'Website Agentur', 'Webdesign Agentur', 'Webdesign made in Germany', 'Webdesign', 'Web
 	agentur' );
 	$embed_link       = $embed_link_texts[ $embed_link_id ];
 
+	// -1 is the default value
+	if ($background_image_id != -1) {
+		$background_image_url = wp_get_attachment_image_url($background_image_id, 'full');
+	} else {
+		$background_image_url = false;
+	}
+	
+	// $background_image_url could still be false when the image id was invalid
+	if ($background_image_url) {
+		$background_style = esc_attr( $layer_bg_color ) . "; background-image: url('" . esc_url($background_image_url) . "'); background-size:cover";
+	} else {
+		$background_style = esc_attr( $layer_bg_color );
+	}
+
 	ob_start();
 	?>
 	<div class="exovid-wrapper is-style-wide" style="<?php echo esc_attr( $aspect_ratio ); ?>">
-		<div class="exovid-mask" style="background-color: <?php echo esc_attr( $layer_bg_color ); ?>; color: <?php echo esc_attr( $font_color ); ?>">
+		<div class="exovid-mask" style="background-color: <?php echo $background_style; ?>; color: <?php echo esc_attr( $font_color ); ?>">
 
 		<div class="exovid-mask-content">
 			<p class="exovid-caption"><?php echo esc_html( $title ); ?></p>
