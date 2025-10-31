@@ -1,5 +1,12 @@
 <?php
 /**
+ *  Exit if accessed directly
+ *
+ * @package Exovia_YouTube_DSGVO
+ */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+/**
  * Shortcode for loading YouTube video with GDPR compliance.
  *
  * @package Exovia_YouTube_DSGVO

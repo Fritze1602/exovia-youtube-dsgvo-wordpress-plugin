@@ -2,8 +2,8 @@
 Contributors: exovia
 Tags: GDPR, DSGVO, YouTube, YouTube Video, YouTube Plugin
 Requires at least: 5.8
-Tested up to: 6.6
-Stable tag: 1.0.0
+Tested up to: 6.8
+Stable tag: 1.0.3
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -144,6 +144,16 @@ The shortcode can be added via the shortcode widget [/], which is specially desi
 = How can I use ACF with the plugin to embed multiple videos? =
 With the recent security release of Advanced Custom Fields (ACF), iframes embedded in rich text fields are filtered out when using `the_field`. This change enhances security by preventing potentially unsafe HTML from being displayed. However, if you still wish to use our plugin to embed multiple videos within your content, you can include the iframe in the shortcode and use `echo get_field()` to output this unsafe HTML. This approach ensures that your iframe is not filtered out by ACF, allowing you to display videos as intended.
 
+== Privacy and Data Usage ==
+
+This plugin connects to YouTube to embed videos in a GDPR-compliant manner. When a user interacts with the video, a connection to YouTube's servers (https://www.youtube-nocookie.com) is established, and data may be transmitted.
+
+**Third-Party Service:**
+- **YouTube:** This plugin uses YouTube's no-cookie iframe embed to display the fallback videos. By clicking on the video, users agree to YouTube's privacy policy and terms of use.
+- **No-Cookie Domain for fallback video:** [https://www.youtube-nocookie.com](https://www.youtube-nocookie.com/embed/FQnEL7pqo40)
+- **Privacy Policy:** [YouTube Privacy Policy](https://policies.google.com/privacy)
+- **Terms of Service:** [YouTube Terms of Service](https://www.youtube.com/static?template=terms)
+
 == Screenshots ==
 
 1. Embed the copied Iframe code into the iframe field 'YouTube Fallback iframe' in the plugin settings
@@ -153,10 +163,18 @@ With the recent security release of Advanced Custom Fields (ACF), iframes embedd
 5. Youtube Video iframe code as basis for the integration into your plugin
 
 
+== Upgrade Notice ==
+= 1.0.3 =
+Compatibility tested up to WordPress 6.8. Recommended update for all users.
+
+
 == Change log ==
-= 1.0 =
+= 1.0.3 =
+* Successful tested with WordPress 6.8
+= 1.0.2 =
+* Successful tested with WordPress 6.7.1
+= 1.0.1 =
+* Compatibility fix with php 7.0
+= 1.0.0 =
 * Addition of the initial version of the exovia YouTube DSGVO plugin
 
-== Upgrade Notice ==
-= 1.0 =
-There is no reason to upgrade at the moment
