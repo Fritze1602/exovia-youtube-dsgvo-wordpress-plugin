@@ -5,6 +5,12 @@
  * @package Exovia_YouTube_DSGVO
  */
 
+
+ /**
+ * Exit if accessed directly
+ */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /**
  * Load plugin textdomain for translations.
  */

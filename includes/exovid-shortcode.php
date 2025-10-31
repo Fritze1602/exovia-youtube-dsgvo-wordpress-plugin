@@ -1,5 +1,12 @@
 <?php
 /**
+ *  Exit if accessed directly
+ *
+ * @package Exovia_YouTube_DSGVO
+ */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+/**
  * Shortcode for loading YouTube video with GDPR compliance.
  *
  * @package Exovia_YouTube_DSGVO
@@ -27,6 +34,10 @@ add_shortcode( 'exovia-dsgvo-youtube-video', 'exovid_youtube_video_gdpr_code' );
  * @return string HTML output of the shortcode.
  */
 function exovid_youtube_video_gdpr_code( $atts ) {
+	// Enqueue assets only when the shortcode is actually used.
+	wp_enqueue_style( 'exovid-shortcode-style' );
+	wp_enqueue_script( 'exovid-shortcode-script' );
+
 	$default = exovid_get_options();
 	$a       = shortcode_atts( $default, $atts );
 
