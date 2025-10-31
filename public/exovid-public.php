@@ -1,4 +1,12 @@
 <?php
+
+/**
+ *  Exit if accessed directly
+ *
+ * @package Exovia_YouTube_DSGVO
+ */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
 /**
  * Register Scripts and Styles for the Shortcode
  *
