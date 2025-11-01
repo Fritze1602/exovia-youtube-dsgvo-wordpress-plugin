@@ -1,5 +1,12 @@
 <?php
 /**
+ *  Exit if accessed directly
+ *
+ * @package Exovia_YouTube_DSGVO
+ */
+if ( ! defined( 'ABSPATH' ) ) exit;
+
+/**
  * Shortcode for loading YouTube video with GDPR compliance.
  *
  * @package Exovia_YouTube_DSGVO
@@ -27,6 +34,10 @@ add_shortcode( 'exovia-dsgvo-youtube-video', 'exovid_youtube_video_gdpr_code' );
  * @return string HTML output of the shortcode.
  */
 function exovid_youtube_video_gdpr_code( $atts ) {
+	// Enqueue assets only when the shortcode is actually used.
+	wp_enqueue_style( 'exovid-shortcode-style' );
+	wp_enqueue_script( 'exovid-shortcode-script' );
+
 	$default = exovid_get_options();
 	$a       = shortcode_atts( $default, $atts );
 
@@ -53,15 +64,32 @@ function exovid_youtube_video_gdpr_code( $atts ) {
 	$enable_info_box      = $a['enable_info_box'];
 	$info_box_text        = $a['info_box_text'];
 	$embed_link_id        = $default['embed_link_id'];
+	$layer_bg_image_id  = $a['layer_bg_image_id'];
 
 	$embed_link_texts = array( 'Website Agentur', 'Webdesign Agentur', 'Webdesign made in Germany', 'Webdesign', 'Web
 	agentur' );
 	$embed_link       = $embed_link_texts[ $embed_link_id ];
 
+	// -1 is the default value (no image chosen)
+	// Returns false if no valid attachment image is found
+	$background_image_url = ( $layer_bg_image_id != -1 )
+		? wp_get_attachment_image_url( $layer_bg_image_id, 'full' )
+		: false;
+
+	// Build inline styles (color always; image only if present)
+	$background_style = [
+		'color:' . esc_attr( $font_color ),
+		'background-color:' . esc_attr( $layer_bg_color ),
+	];
+
+	if ( $background_image_url ) {
+		$background_style[] = "background-image:url('" . esc_url( $background_image_url ) . "')";
+	}
+
 	ob_start();
 	?>
 	<div class="exovid-wrapper is-style-wide" style="<?php echo esc_attr( $aspect_ratio ); ?>">
-		<div class="exovid-mask" style="background-color: <?php echo esc_attr( $layer_bg_color ); ?>; color: <?php echo esc_attr( $font_color ); ?>">
+		<div class="exovid-mask" style="<?php echo esc_attr( implode( '; ', $background_style ) ); ?>">
 
 		<div class="exovid-mask-content">
 			<p class="exovid-caption"><?php echo esc_html( $title ); ?></p>
