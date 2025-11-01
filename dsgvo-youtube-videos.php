@@ -3,7 +3,7 @@
  * Plugin Name:       exovia YouTube DSGVO
  * Plugin URI:        https://wordpress.org/plugins/exovia-youtube-dsgvo/
  * Description:       Easily embed DSGVO compliant Youtube videos
- * Version:           1.0.3
+ * Version:           1.1.0
  * Requires at least: 5.8
  * Requires PHP:      7.0
  * Author:            exovia

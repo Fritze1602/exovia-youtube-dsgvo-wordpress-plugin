@@ -3,7 +3,7 @@ Contributors: exovia
 Tags: GDPR, DSGVO, YouTube, YouTube Video, YouTube Plugin
 Requires at least: 5.8
 Tested up to: 6.8
-Stable tag: 1.0.3
+Stable tag: 1.1.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -35,7 +35,7 @@ Want a live demo? Then feel free to visit the following article. There we have i
 **4 SIMPLE STEPS FOR YOUR 2ND OR 50TH VIDEO**
 Extended Shortcode Example:
 ```
-[exovia-dsgvo-youtube-video iframe='&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qqobbcK0R-o?start=32" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;' layer_bg_color='#f88379' button_bg_color='#8379f8']
+[exovia-dsgvo-youtube-video iframe='&lt;iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/qqobbcK0R-o?start=32" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen&gt;&lt;/iframe&gt;' layer_bg_color='#f88379' button_bg_color='#8379f8' layer_bg_image_id="11"]
 ```
 1. Copy the extended shortcode above and place it on your website where you want your video to appear.
 1. Go to youtube.com, find the video you want to embed in your website, and click on it.
@@ -66,6 +66,7 @@ Extended Shortcode Example:
 * button_title_all (string)
 * layer_text (string)
 * anchor_text (string)
+* layer_bg_image_id (integer — WordPress attachment ID used as placeholder background image)
 * layer_bg_color (css color, hex)
 * button_bg_color (css color, hex)
 * font_color (css color, hex)
@@ -164,11 +165,15 @@ This plugin connects to YouTube to embed videos in a GDPR-compliant manner. When
 
 
 == Upgrade Notice ==
-= 1.0.3 =
-Compatibility tested up to WordPress 6.8. Recommended update for all users.
+= 1.1.0 =
+Adds optional placeholder background images and improves asset loading. Recommended update for all users.
 
 
 == Change log ==
+= 1.1.0 =
+* Fix: Assets now load correctly on archive and landing pages (thanks to Erik Tews)
+* Feature: Added support for a background image placeholder via `layer_bg_image_id` (thanks to Erik Tews)
+* Polish: Cleaned up inline styles (fallback color + optional image; layout moved to CSS)
 = 1.0.3 =
 * Successful tested with WordPress 6.8
 = 1.0.2 =
