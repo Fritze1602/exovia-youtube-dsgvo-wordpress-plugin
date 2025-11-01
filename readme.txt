@@ -162,6 +162,7 @@ This plugin connects to YouTube to embed videos in a GDPR-compliant manner. When
 3. insert the shortcode <code>[exovia-dsgvo-youtube-video]</code> in the text field - with block editor
 4. Flexibility: GDPR Video Wrap with Fallback from settings-page on top of GDPR Video Wrap with individual parameters.
 5. Youtube Video iframe code as basis for the integration into your plugin
+6. Plugin rendering with background image
 
 
 == Upgrade Notice ==
